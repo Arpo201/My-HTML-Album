@@ -20,7 +20,8 @@ body#tutorial{
     to{background-position: -100% -88%;}
 }
 body#about_me{
-    background-color: chocolate;
+    /* background-color: chocolate; */
+    background-image: url(images/cat.jpg);
 }
 nav{
     width: 100%;
