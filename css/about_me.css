@@ -9,7 +9,7 @@ nav{
     width: 100%;
 }
 body#about_me{
-    background-image: url(/css/images/cat.jpg);
+    background-image: url(images/cat.jpg);
     background-size: 100%;
 }
 table{
