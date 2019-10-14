@@ -7,4 +7,8 @@
     border: grey 3px solid;
     margin-top: -600px;
     margin-left: 50px;
+    border-radius: 10px;
+}
+input{
+    background-color: rgba(255, 255, 255, 0.5);
 }
