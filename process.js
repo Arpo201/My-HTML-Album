@@ -8,9 +8,10 @@ function loveYou(){
 
 function binary(){
     var num = 69
-    var i = 0
+    var str = ""
     while (num != 1,0){
+        str += num%2
         num /= 2;
-        console.log(num);
+    console.log(str);
     }
 }

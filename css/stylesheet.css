@@ -14,7 +14,10 @@ body#tutorial{
     background-size: 20%;
     animation: cat 40s infinite linear;
 }
-
+body#calculation{
+    background-image: url(images/cat.jpg);
+    background-size: 100%;
+}
 @keyframes cat{
     from{background-position: 0% 0%;}
     to{background-position: -100% -88%;}
