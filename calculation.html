@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <title>Calculation</title>
     <link rel="stylesheet" href="css/stylesheet.css">
-    <script></script>
+    <link rel="stylesheet" href="css/calculation.css">
+    <script src="process.js"></script>
 </head>
 <body id="calculation">
     <nav>
@@ -15,5 +16,13 @@
             <a href="index.html" class="under">Home</a>
         </div>
     </nav>
+    <div class="box">
+        <form name="plusForms" onsubmit="return plusCss()" style="padding: 10px;">
+            <h3>Plus <input type="submit" value="calculate"></h3> 
+            <pre>num_1 + num_2 = <strong id="plus">Ans</strong></pre>
+            num_1 = <input type="number" name="num_1" style="text-align: center; width: 100px;"> <br>
+            num_2 = <input type="number" name="num_2" style="text-align: center; width: 100px;"> <br><br>
+        </form>
+    </div>
 </body>
 </html>

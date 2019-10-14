@@ -5,7 +5,14 @@ function loveYou(){
     document.getElementById("love").value = answer;
     return false
 }
-
+function plusCss(){
+    var a, b, c;
+    a = Number(document.forms["plusForms"]["num_1"].value);
+    b = Number(document.forms["plusForms"]["num_2"].value);
+    c = a+b;
+    document.getElementById("plus").innerHTML = c;
+    return false
+}
 function binary(){
     var num = 69
     var str = ""
