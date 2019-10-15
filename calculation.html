@@ -16,13 +16,49 @@
             <a href="index.html" class="under">Home</a>
         </div>
     </nav>
+    <div id="box" style="margin-top: -680px;">
     <div class="box">
-        <form name="plusForms" onsubmit="return plusCss()" style="padding: 10px;">
-            <h3>Plus <input type="submit" value="calculate"></h3> 
-            <pre>num_1 + num_2 = <strong id="plus">Ans</strong></pre>
-            num_1 = <input type="number" name="num_1" style="text-align: center; width: 100px;"> <br>
-            num_2 = <input type="number" name="num_2" style="text-align: center; width: 100px;"> <br><br>
+        <form name="plusForms" onsubmit="return plusJs()" style="padding: 10px;">
+            <p><strong>Plus</strong> <input type="submit" value="calculate"><br>    
+            num_A + num_B = <strong id="plus">Ans</strong><br>
+            num_A = <input type="text" name="numAPlus"> <br>
+            num_B = <input type="text" name="numBPlus"> <br><br>
+            </p>
         </form>
+    </div>
+    <div class="box">
+        <form name="minusForms" onsubmit="return minusJs()">
+            <p><strong>Minus</strong> <input type="submit" value="calculate"><br>
+            num_A - num_B = <strong id="minus">Ans</strong><br>
+            num_A = <input type="text" name="numAMinus"><br>
+            num_B = <input type="text" name="numBMinus">
+            </p>
+        </form>
+    </div>
+    <div class="box">
+        <form name="vertor2DForms" onsubmit="return vector2D()">
+            <p><strong>Vector size</strong> <input type="submit" value="calculate"><br>
+            Point (X1,Y1) and Point (X2,Y2) have size = <strong id=vector_size2D>Ans</strong><br>
+            Point X1 : <input type="text" name="pointx1"><br>
+            Point Y1 : <input type="text" name="pointy1"><br>
+            Point X2 : <input type="text" name="pointx2"><br>
+            Point Y2 : <input type="text" name="pointy2"><br>
+            </p>
+        </form>
+    </div>
+    <div class="box">
+        <form name="vertor3DForms" onsubmit="return vector3D()">
+            <p><strong>Vector size</strong> <input type="submit" value="calculate"><br>
+            Point (X1,Y1,Z1) and Point (X2,Y2,Z2) have size = <strong id=vector_size3D>Ans</strong><br>
+            Point X1 : <input type="text" name="pointx1"><br>
+            Point Y1 : <input type="text" name="pointy1"><br>
+            Point Z1 : <input type="text" name="pointz1"><br>
+            Point X2 : <input type="text" name="pointx2"><br>
+            Point Y2 : <input type="text" name="pointy2"><br>
+            Point Z2 : <input type="text" name="pointz2"><br>
+            </p>
+        </form>
+    </div>
     </div>
 </body>
 </html>
