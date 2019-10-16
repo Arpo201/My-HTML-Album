@@ -48,3 +48,40 @@ function vector3D(){
     document.getElementById("vector_size3D").innerHTML = size
     return false
 }
+
+//15.วิธีเรียงสับเปลี่ยน, ความน่าจะเป็น, ทฤษฎีบทวินาม
+//วิธีเรียงสับเปลี่ยน
+//สับเปลี่ยนเชิงเส้น ไม่ซ้ำกันเลย (Linear Permutation)
+function linearPer1(){
+    var num, ans, i
+    ans = 1
+    i = 1
+    num = Number(document.forms["permutation_not_similar"]["fac"].value)
+    for (1; i <= num; i++){
+        ans *= i
+    }
+    document.getElementById("linear_per1").innerHTML = ans
+    return false
+}
+//สับเปลี่ยนเชิงเส้น มีตัวซ้ำ
+function linearPer2(){
+    var num, ans, divideNum, i, devide
+    ans = 1
+    i = 1
+    devide = 1
+    num = Number(document.forms["permutation_similar"]["fac"].value)
+    divideNum = document.forms["permutation_similar"]["fac_devide"].value
+    divideNum = divideNum.split(",")
+    for (1; i <= num; i++ ){
+        ans *= i
+    }
+    for(x in divideNum){
+        i = 1
+        for (1; i<=Number(divideNum[x]); i++){
+            devide *= i
+        }
+    }
+    ans /= devide
+    document.getElementById("linear_per2").innerHTML = ans
+    return false
+}
