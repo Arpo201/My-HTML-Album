@@ -5,6 +5,8 @@ function loveYou(){
     document.getElementById("love").value = answer;
     return false
 }
+
+
 // Calculation page
 function plusJs(){
     var a, b, c;
@@ -23,6 +25,7 @@ function minusJs(){
     return false
 }
 
+
 //Vector 2D size
 function vector2D(){
     var pointX1, pointY1, pointX2, pointY2, size
@@ -34,6 +37,7 @@ function vector2D(){
     document.getElementById("vector_size2D").innerHTML = size
     return false
 }
+
 
 //Vector 3D size
 function vector3D(){
@@ -49,7 +53,9 @@ function vector3D(){
     return false
 }
 
+
 //15.วิธีเรียงสับเปลี่ยน, ความน่าจะเป็น, ทฤษฎีบทวินาม
+
 //วิธีเรียงสับเปลี่ยน
 //สับเปลี่ยนเชิงเส้น ไม่ซ้ำกันเลย (Linear Permutation)
 function linearPer1(){
@@ -63,6 +69,7 @@ function linearPer1(){
     document.getElementById("linear_per1").innerHTML = ans
     return false
 }
+
 //สับเปลี่ยนเชิงเส้น มีตัวซ้ำ
 function linearPer2(){
     var num, ans, divideNum, i, devide
@@ -83,5 +90,28 @@ function linearPer2(){
     }
     ans /= devide
     document.getElementById("linear_per2").innerHTML = ans
+    return false
+}
+
+//สับเปลี่ยนวงกลม
+function circlePer(){
+    var num, ans, i
+    num = Number(document.forms["circle_permutation"]["num"].value)-1
+    ans = 1
+    for (i = 1; i <= num; i++){
+        ans *= i
+    }
+    document.getElementById("circle_per").innerHTML = ans
+    return false
+}
+
+
+//ความน่าจะเป็น
+function  probability(){
+    var numProbability, numE, numS //numE ความน่าจะเป็นของเหตุการณ์ที่สนใจ numS ความน่าจะเป็นของเหตุการณ์ทั้งหมด
+    numE = Number(document.forms["probabilityForms"]["num_event"].value)
+    numS = Number(document.forms["probabilityForms"]["num_sample_space"].value)
+    numProbability = numE/numS
+    document.getElementById("probability_ans").innerHTML = numProbability
     return false
 }
