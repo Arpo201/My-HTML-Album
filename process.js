@@ -70,14 +70,15 @@ function linearPer1(){
     return false
 }
 
+
 //สับเปลี่ยนเชิงเส้น มีตัวซ้ำ
 function linearPer2(){
     var num, ans, divideNum, i, devide
     ans = 1
     i = 1
-    devide = 1
+    divide = 1
     num = Number(document.forms["permutation_similar"]["fac"].value)
-    divideNum = document.forms["permutation_similar"]["fac_devide"].value
+    divideNum = document.forms["permutation_similar"]["fac_divide"].value
     divideNum = divideNum.split(",")
     for (1; i <= num; i++ ){
         ans *= i
@@ -85,13 +86,14 @@ function linearPer2(){
     for(x in divideNum){
         i = 1
         for (1; i<=Number(divideNum[x]); i++){
-            devide *= i
+            divide *= i
         }
     }
-    ans /= devide
+    ans /= divide
     document.getElementById("linear_per2").innerHTML = ans
     return false
 }
+
 
 //สับเปลี่ยนวงกลม
 function circlePer(){
