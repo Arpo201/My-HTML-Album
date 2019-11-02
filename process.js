@@ -3,13 +3,14 @@ function forMap(value){
 }
 
 function count(want, array){
+    var i;
     var count = 0
-    for(var i = 0; i < array.length; ++i){
+    for(i in array){
         if(array[i] == want){
             count++;
         }
     }
-    return want
+    return count
 }
 
 function set(array){
@@ -84,14 +85,19 @@ function vector3D(){
 //10.สถิติ
 //Mode
 function mode(){
-    var values, valueSet, i
+    var values, valueSet, i, numSet, total
+    numSet = []
     values = (document.forms["modeForms"]["values"].value).split(" ").map(forMap)
     valueSet = set(values)
     for(i in valueSet){
-        //
+        total = count(valueSet[i], values)
+        numSet.push(total)
     }
-    values = Math.max.apply(null, values) //ตอนนี้หาค่ามากที่สุดใน array อยู่
-    document.getElementById("mode").innerHTML = values
+    //ข้างบนถูกหมดแล้ว
+    Math.max(...numSet) //หาค่าที่มากที่สุดใน Array
+    //ถ้าจำนวนค่ามากสุด ใน numSet มากกว่า 2 แสดงว่าไม่มี mode
+    //ยังไม่เสร็จ เดี๋ยวทำต่อ
+    document.getElementById("mode").innerHTML = numSet
     return false
 }
 
