@@ -87,7 +87,7 @@ function vector3D(){
 function mode(){
     var values, valueSet, i, numSet, total
     var mostFrequency1, mostFrequency2, mostFrequency3
-    var indexFre1, indexFre2, indexFre3
+    var indexFre1, indexFre2
     numSet = []
     values = (document.forms["modeForms"]["values"].value).split(" ").map(forMap)
     valueSet = set(values)
