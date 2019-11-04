@@ -164,6 +164,24 @@ function linearPer2(){
     return false
 }
 
+//ทฤษฎีบททวินาม(Binomial Theorem)
+//ยังไม่เสร็จ เหลือหาค่าคงที่ด้านหน้าแต่ละพจน์
+function bioTheorem(){
+    var num = Number(document.forms[][].value)
+    var i, data, aExponent, bExponent, constant
+    data = []
+    for(i = 0; i <= num; i++){
+        aExponent = num-i
+        bExponent = i
+        constant = (aExponent+bExponent).toString()
+        if(i == 0 || i == num){
+            data.push("(a^" + aExponent.toString() + ")(b^" + bExponent.toString() + ")")
+        } else{
+            data.push(constant + "(a^" + aExponent.toString() + ")(b^" + bExponent.toString() + ")")
+        }
+    }
+
+}
 
 //สับเปลี่ยนวงกลม
 function circlePer(){
@@ -187,3 +205,4 @@ function  probability(){
     document.getElementById("probability_ans").innerHTML = numProbability
     return false
 }
+
