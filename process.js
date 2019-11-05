@@ -1,7 +1,4 @@
-function forMap(value){
-    return Number(value)
-}
-
+//ใช้เพื่อนับค่า want ใน array ที่ต้องการว่ามีกี่ตัว Argument: Number, array | return: Number
 function count(want, array){
     var i;
     var count = 0
@@ -13,6 +10,7 @@ function count(want, array){
     return count
 }
 
+//ใช้เพื่อหา set(ไม่มีตัวซ้ำใน array) Argument: array | return: array
 function set(array){
     var i, check, newArray;
     newArray = []
@@ -23,6 +21,22 @@ function set(array){
         }
     }
     return newArray
+}
+
+//ใช้เพื่อหาค่าตาม 3 เหลี่ยมพาสคาล ใช้ในทฤษฎีบททวินาม(Binomial Theorem) | return: array
+function trianglePascal_n(num){
+    var round, value, now_value
+    value = [1, 1]
+    for(round = 1; round <= num; round++){
+        now_value = []
+        for(posi = 1; posi < round; posi++){
+            now_value.push(value[posi]+value[posi-1])
+        }
+        now_value.unshift(1)
+        now_value.push(1)
+        value = now_value
+    }
+    return value
 }
 
 function loveYou(){
@@ -89,12 +103,12 @@ function mode(){
     var mostFrequency1, mostFrequency2, mostFrequency3
     var indexFre1, indexFre2
     numSet = []
-    values = (document.forms["modeForms"]["values"].value).split(" ").map(forMap)
+    values = (document.forms["modeForms"]["values"].value).split(" ").map(Number)
     valueSet = set(values)
     for(i in valueSet){
         total = count(valueSet[i], values)
         numSet.push(total)
-    }//ข้างบนถูกหมดแล้ว
+    }
     mostFrequency1 = Math.max(...numSet)
     indexFre1 = numSet.indexOf(mostFrequency1)
     numSet[indexFre1] = 0
@@ -164,24 +178,6 @@ function linearPer2(){
     return false
 }
 
-//ทฤษฎีบททวินาม(Binomial Theorem)
-//ยังไม่เสร็จ เหลือหาค่าคงที่ด้านหน้าแต่ละพจน์
-function bioTheorem(){
-    var num = Number(document.forms[][].value)
-    var i, data, aExponent, bExponent, constant
-    data = []
-    for(i = 0; i <= num; i++){
-        aExponent = num-i
-        bExponent = i
-        constant = (aExponent+bExponent).toString()
-        if(i == 0 || i == num){
-            data.push("(a^" + aExponent.toString() + ")(b^" + bExponent.toString() + ")")
-        } else{
-            data.push(constant + "(a^" + aExponent.toString() + ")(b^" + bExponent.toString() + ")")
-        }
-    }
-
-}
 
 //สับเปลี่ยนวงกลม
 function circlePer(){
@@ -206,3 +202,24 @@ function  probability(){
     return false
 }
 
+
+//ทฤษฎีบททวินาม(Binomial Theorem)
+function bioTheorem(){
+    var num = Number(document.forms["Binomial_Theorem_form"]["exponent"].value)
+    var i, data, aExponent, bExponent, constant
+    data = []
+    for(i = 0; i <= num; i++){
+        aExponent = num-i
+        bExponent = i
+        constant = trianglePascal_n(num)
+        if(i == 0){
+            data.push("a<sup>" + aExponent.toString() + "</sup>")
+        }else if(i == num){
+            data.push("b<sup>" + bExponent.toString() + "</sup>")
+        }else{
+            data.push(constant[i] + "a<sup>" + aExponent.toString() + "</sup>b<sup>" + bExponent.toString() + "</sup>")
+        }
+    }
+    document.getElementById("binomial_theorem").innerHTML = data.join(" + ")
+    return false
+}
