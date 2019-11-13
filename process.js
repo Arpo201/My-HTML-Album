@@ -39,6 +39,11 @@ function trianglePascal_n(num){
     return value
 }
 
+//ใช้เพื่อหาค่า log ของ y ฐาน x | return: Number
+function getBaseLog(x, y) {
+    return Math.log(y) / Math.log(x);
+  }
+
 function loveYou(){
     var person1 = document.forms["twoPerson"]["person1"].value;
     var person2 = document.forms["twoPerson"]["person2"].value;
@@ -137,6 +142,33 @@ function mode(){
 }
 
 
+// 14.ฟังก์ชันเอกโพซ์เนนเชียล และฟังก์ชันลอการิทึม
+//Exponential
+function findExponential(){
+    var value, power, ans
+    value = eval(document.forms["Exponential_form"]["value"].value)
+    power = eval(document.forms["Exponential_form"]["power"].value)
+    ans = Math.pow(value, power)
+    if(1>ans>0){
+        document.getElementById("featureExpo").innerHTML = "Decreasing function"
+    }else if(ans>1){
+        document.getElementById("featureExpo").innerHTML = "Increasing function"
+    }else{
+        document.getElementById("featureExpo").innerHTML = "Isn't exponential function"
+    }
+    document.getElementById("exponential").innerHTML = ans
+    return false
+}
+
+
+//Logarithm(Fundamental)
+function findLog(){
+    var value, base
+    value = Number(document.forms["Logarithm_form"]["value_x"].value)
+    base = Number(document.forms["Logarithm_form"]["value_y"].value)
+    document.getElementById("log").innerHTML = getBaseLog(base, value)
+    return false
+}
 
 
 //15.วิธีเรียงสับเปลี่ยน, ความน่าจะเป็น, ทฤษฎีบทวินาม

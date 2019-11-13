@@ -120,6 +120,36 @@
         </form>
     </div>
 
+    <div class="box">
+        <form name="Logarithm_form" onsubmit="return findLog()">
+        <p><strong>Logarithm <input type="submit" value="calculate"></strong><br>
+            Log<sub>x</sub>y = <strong id="log">Ans</strong><br>
+            x = <input type="text" name="value_x" placeholder="static value"><br>
+            y = <input type="text" name="value_y" placeholder="base">
+        </p>
+        </form>
+    </div>
+
+    <div class="box">
+            <form name="Exponential_form" onsubmit="return findExponential()">
+            <p><strong>Exponential <input type="submit" value="calculate"></strong><br>
+                a<sup>x</sup> = <strong id="exponential">Ans</strong><br>
+                Feature: <strong id="featureExpo">Ans</strong><br>
+                a = <input type="text" name="value" placeholder="static value"><br>
+                x = <input type="text" name="power" placeholder="power">
+            </p>
+            </form>
+        </div>
+    <!-- <div class="box">
+        <form name="matrix_plus_form" onsubmit="return ">
+        <p><strong>Matrix plus <input type="submit" value="calculate"></strong><br>
+            matrix A = <input type="text" name="matrix_A" style="height: 200px; width: 100px; resize: none;"><br>
+            matrix B = <input type="text" name="matrix_A" style="height: 200px; width: 400px; display: inline-block;"><br>
+            Note: 
+        </p>
+        </form>
+    </div> -->
+
     </div>
 </body>
 </html>
