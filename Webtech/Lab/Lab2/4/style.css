@@ -1,0 +1,28 @@
+#box{
+    width: 800px;
+    height: 600px;
+}
+#box div{
+    height: 30px;
+    margin-bottom: 10px;
+}
+.d1{
+    background: rgb(255, 0, 221);
+    width: 60%;
+}
+.d2{
+    background: rgb(255, 50, 230);
+    width: 90%;
+}
+.d3{
+    background: rgb(255, 100, 233);
+    width: 50%;
+}
+.d4{
+    background: rgb(255, 150, 237);
+    width: 80%;
+}
+.d5{
+    background: rgb(255, 200, 242);
+    width: 75%;
+}

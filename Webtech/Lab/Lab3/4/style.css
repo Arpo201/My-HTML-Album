@@ -1,0 +1,27 @@
+body{
+    text-align: center;
+}
+.container{
+    width: 310px;
+    height: 310px;
+    margin: auto;
+}
+#box1, #box2, #box3, #box4{
+    width: 150px;
+    height: 150px;
+    display: inline-block;
+    background-size: cover;
+    color: #0000;
+}
+#box1{
+    background-image: url(http://10.0.15.12/lab3/images/1.png);
+}
+#box2{
+    background-image: url(http://10.0.15.12/lab3/images/2.png);
+}
+#box3{
+    background-image: url(http://10.0.15.12/lab3/images/3.png);
+}
+#box4{
+    background-image: url(http://10.0.15.12/lab3/images/4.png);
+}
