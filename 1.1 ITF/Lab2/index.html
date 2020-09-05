@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <title>Comment Form</title>
+  </head>
+  <body style="background-color: antiquewhite">
+    <div class="container" style="background-color: rgba(255, 255, 255, 0.705)">
+      <table class="table table-sm">
+        <thead class="thead-dark">
+          <tr class="row">
+            <th class="col" style="text-align: center">Name</th>
+            <th class="col" style="text-align: center">Comment</th>
+            <th class="col" style="text-align: center">Link</th>
+          </tr>
+        </thead>
+        <tbody id="dataRow"></tbody>
+      </table>
+      <hr />
+      <form id="CommentForm">
+        Name:<br />
+        <input
+          type="text"
+          id="idName"
+          class="form-control"
+          placeholder="Enter name"
+        /><br />
+        Comment:<br />
+        <textarea
+          id="idComment"
+          cols="50"
+          rows="5"
+          class="form-control"
+          placeholder="Enter Comment"
+        ></textarea
+        ><br />
+        Link: <br />
+        <input
+          type="text"
+          id="idLink"
+          class="form-control"
+          placeholder="Enter Link"
+        />
+        <br /><br />
+        <input type="submit" class="btn btn-success w-100" id="commentBtn" />
+      </form>
+      <br />
+    </div>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-analytics.js"></script>
+
+    <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: "AIzaSyDK5afd_JgkxTO6_YN846ak4VQOod6xxMc",
+        authDomain: "itf-test2.firebaseapp.com",
+        databaseURL: "https://itf-test2.firebaseio.com",
+        projectId: "itf-test2",
+        storageBucket: "itf-test2.appspot.com",
+        messagingSenderId: "657429196916",
+        appId: "1:657429196916:web:153f7e0afc5a4929b1e121",
+        measurementId: "G-XGCVY9WTV0",
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      firebase.analytics();
+
+      let myFirebase = firebase.database();
+      let dataRef = myFirebase.ref("/guestbook");
+
+      dataRef.limitToLast(5).on("child_added", function (childSnapshot) {
+        let item = childSnapshot.val();
+        document.getElementById("dataRow").innerHTML +=
+          "<tr class='row'><td class='col'>" +
+          item.name +
+          "</td><td class='col'>" +
+          item.comment +
+          "</td><td class='col'>" +
+          "<a href=http://" +
+          item.link +
+          " target='_blank'>" +
+          item.link +
+          "</a></td><tr>";
+      });
+
+      document.getElementById("commentBtn").onclick = function () {
+        let lname = document.getElementById("idName").value;
+        let lcomment = document.getElementById("idComment").value;
+        let llink = document.getElementById("idLink").value;
+        let ltime = Date.now();
+
+        dataRef.push({
+          name: lname,
+          comment: lcomment,
+          link: llink,
+          time: ltime,
+        });
+      };
+    </script>
+  </body>
+</html>

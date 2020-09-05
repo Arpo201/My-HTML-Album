@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <title>Home</title>
+    <style>
+      p {
+        font-size: 16px;
+      }
+      .head {
+        font-size: 20px;
+      }
+      button {
+        font-size: 12px;
+
+        background-repeat: no-repeat;
+      }
+      img {
+        transform: scale(1);
+        transition-duration: 0.5s;
+      }
+      img:hover {
+        transform: scale(1.3);
+        transition-duration: 0.5s;
+      }
+      .cover:hover {
+        transform: scale(1);
+      }
+    </style>
+  </head>
+  <body
+    style="
+      background-image: url(img/bg2.jpg);
+      background-attachment: fixed;
+      background-size: cover;
+      background-repeat: no-repeat;
+    "
+  >
+    <div class="container" style="background-color: rgba(255, 255, 255, 0.808)">
+      <div class="row">
+        <div style="width: 100%">
+          <img
+            src="img/Garena.jpg"
+            class="cover"
+            alt="garena pic"
+            width="100%"
+            height="100%"
+          />
+        </div>
+      </div>
+      <div class="row" style="background-color: rgb(45, 45, 46); color: white">
+        <div class="col-md-4" style="text-align: center">
+          <a href="work1.html"><h4 style="color: white">Work1</h4></a>
+        </div>
+        <div class="col-md-4" style="text-align: center">
+          <a href="index.html"><h4 style="color: white">Home</h4></a>
+        </div>
+        <div class="col-md-4" style="text-align: center">
+          <a href="work2.html"><h4 style="color: white">Work2</h4></a>
+        </div>
+      </div>
+      <br />
+      <div class="row">
+        <div class="col-md-1"></div>
+        <div class="col-md-5">
+          <p>
+            <strong>What has this website?</strong><br />
+            This website will tell you about 3 games of Garena.<br />
+            <strong>First</strong>: League of Legends(LoL)<br />
+            <strong>Second</strong>: Blade&Soul(BnS)<br />
+            <strong>Third</strong>: Ring of Elysium(RoE)<br />
+            <button
+              onclick="document.getElementById('love').innerHTML = 'Love You ^-^'"
+              class="btn btn-info"
+            >
+              What is hidden?
+            </button>
+            : <strong id="love">********</strong>
+          </p>
+        </div>
+        <div class="col-md-5">
+          <p>
+            <strong>Phone</strong>: 02-1189193 <br />
+            <strong>Address</strong>: บริษัท การีนา ออนไลน์ (ประเทศไทย) จำกัด 89
+            อาคารเอไอเอ แคปปิตอล เซ็นเตอร์ ชั้น 24 ถนนรัชดาภิเษก แขวงดินแดง
+            เขตดินแดง กทม. 10400 <br /><a
+              href="https://www.garena.co.th/"
+              class="btn btn-info"
+              >Website</a
+            >
+          </p>
+        </div>
+        <div class="col-md-1"></div>
+      </div>
+      <hr />
+      <h6 class="head" style="text-align: center">About games</h6>
+      <br />
+      <div class="row">
+        <div class="col-md-4">
+          <img
+            src="img/LoL.jpeg"
+            alt="LoL"
+            class="img-fluid rounded-circle"
+          /><br /><br />
+          <p style="text-align: center">
+            <a href="https://lol.garena.in.th/main">League of legends</a>
+          </p>
+          <p style="text-align: justify">
+            เป็นเกม Moba 3D ที่ออกแบบให้เล่นในมุมมองบุคคลที่ 3 ตัวละครหลักของ
+            League of legends นั้น คือ แชมเปี้ยน(Champion) ที่จะถูกบังคับ โดย
+            ผู้เล่น และจะแบ่งเป็น 2 ทีม ทีมละ 5 คน
+          </p>
+        </div>
+        <div class="col-md-4">
+          <img
+            src="img/BnS.jpg"
+            alt="BnS"
+            class="img-fluid rounded-circle"
+          /><br /><br />
+          <p style="text-align: center">
+            <a href="https://bns.garena.in.th/">Blade&Soul</a>
+          </p>
+          <p style="text-align: justify">
+            เป็นเกมแนว MMORPG ที่ต้องรับเควสส่งเควสตีมอนเตอร์ลงดันและ PVP
+            เป็นเกมเก็บเลเวลทั่วๆไป
+            โดยผู้เล่นจะได้สวมบทบาทเป็นตัวละครหลักที่ดำเนินเนื้อเรื่องผ่านมุมมองของผู้เล่น
+          </p>
+        </div>
+        <div class="col-md-4">
+          <img
+            src="img/RoE.jpg"
+            alt="RoE"
+            class="img-fluid rounded-circle"
+          /><br /><br />
+          <p style="text-align: center">
+            <a href="https://roe.garena.in.th/">Ring of Elysium</a>
+          </p>
+          <p style="text-align: justify">
+            เป็นเกม Battle Royale โดยผู้เล่นจะต้องเอาชีวิตรอด
+            จากการหาอาวุธและอุปกรณ์ต่างๆ
+            เพื่อใช้ในการต่อสู้กับผู้เล่นคนอี่นๆเพื่ออยู่รอดเป็นคนสุดท้ายและเป็นผู้ชนะ
+            เล่นได้ทั้งแบบ เดี่ยว คู่ หรือทีมแบบ 4 คนก็ได้
+          </p>
+        </div>
+      </div>
+      <hr />
+      <h6 class="head" style="text-align: center">Pictures</h6>
+      <br />
+      <div class="row">
+        <div class="col-md-3">
+          <img src="img/home/lol1.jpg" alt="" class="img-fluid rounded" />
+        </div>
+        <div class="col-md-3">
+          <img src="img/home/lol2.jpg" alt="" class="img-fluid rounded" />
+        </div>
+        <div class="col-md-3">
+          <img src="img/home/lol3.jpg" alt="" class="img-fluid rounded" />
+        </div>
+        <div class="col-md-3">
+          <img src="img/home/lol4.jpg" alt="" class="img-fluid rounded" />
+        </div>
+      </div>
+      <br />
+      <div class="row">
+        <div class="col-md-3">
+          <img src="img/home/BnS1.jpg" alt="" class="img-fluid rounded" />
+        </div>
+        <div class="col-md-3">
+          <img src="img/home/BnS2.jpg" alt="" class="img-fluid rounded" />
+        </div>
+        <div class="col-md-3">
+          <img src="img/home/BnS3.jpg" alt="" class="img-fluid rounded" />
+        </div>
+        <div class="col-md-3">
+          <img src="img/home/BnS4.jpg" alt="" class="img-fluid rounded" />
+        </div>
+      </div>
+      <hr />
+      <br />
+    </div>
+  </body>
+</html>
