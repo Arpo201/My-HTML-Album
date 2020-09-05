@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lab4.2</title>
+    <script>
+      function cal() {
+        var val = document.querySelectorAll("input");
+        var val1 = parseInt(val[0].value);
+        var val2 = parseInt(val[1].value);
+        var ans = val1 + val2;
+        var node = document.createElement("p");
+        node.innerHTML = "" + val1 + " + " + val2 + " = " + ans;
+        document.getElementById("box").appendChild(node);
+      }
+    </script>
+  </head>
+  <body>
+    <div><label for="">Value1: </label> <input type="text" /></div>
+    <div><label for="">Value2: </label> <input type="text" /></div>
+    <button onclick="cal()">Calculate</button>
+    <div id="box">
+      <h6 style="display: inline">Result:</h6>
+      <h6 id="ans" style="display: inline"></h6>
+    </div>
+  </body>
+</html>

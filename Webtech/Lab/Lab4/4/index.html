@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>lab4.4</title>
+    <style>
+      body {
+        display: grid;
+        align-items: center;
+        justify-items: center;
+        height: 95vh;
+        color: white;
+      }
+      #box {
+        width: 500px;
+        height: 500px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="box"></div>
+    <script>
+      let frame = document.getElementById("box");
+      let box, color;
+      for (var i = 1; i < 65; i++) {
+        box = document.createElement("div");
+        box.style.width = "11%";
+        box.style.padding = "20px 0px";
+        box.style.display = "inline-block";
+        box.style.border = "black 1px solid";
+        box.style.margin = "1px";
+        color =
+          "#" + ((Math.random() * 0xffffff) << 0).toString(16).padStart(6, "0");
+        box.style.backgroundColor = color;
+        box.innerHTML = i;
+        frame.appendChild(box);
+        console.log(color);
+      }
+    </script>
+  </body>
+</html>
