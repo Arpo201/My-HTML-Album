@@ -1,3 +1,7 @@
+@import url("https://fonts.googleapis.com/css2?family=Prompt&display=swap");
+* {
+  font-family: "Prompt", sans-serif;
+}
 body {
   background-image: url("BG.jpg");
   background-size: cover;
@@ -5,6 +9,28 @@ body {
   background-repeat: no-repeat;
 }
 .container {
-  background-color: rgba(255, 255, 255, 0.7);
+  background-color: rgba(255, 255, 255, 0.8);
   border-radius: 10px;
+}
+#showBox {
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  margin: 10px;
+  border-radius: 10px;
+  overflow: auto;
+}
+label {
+  cursor: pointer;
+}
+.al {
+  color: white;
+}
+.al:hover {
+  color: rgba(255, 255, 255, 0.5);
+}
+.w-15 {
+  width: 15% !important;
+}
+.w-30 {
+  width: 30% !important;
 }
