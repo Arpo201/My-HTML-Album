@@ -28,9 +28,3 @@ label {
 .al:hover {
   color: rgba(255, 255, 255, 0.5);
 }
-.w-15 {
-  width: 15% !important;
-}
-.w-30 {
-  width: 30% !important;
-}
